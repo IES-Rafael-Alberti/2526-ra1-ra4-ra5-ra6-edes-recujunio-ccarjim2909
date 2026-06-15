@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/f9yoQ7kr)
 # 2526 - Recuperación de entornos de desarrollo - DAW
 
 > AVISO!!! Únicamente puedes usar un editor (No IDE) y la documentación de plantUML para generar los diagramas UML. El uso de cualquier recurso que no sean estos, supondrá la no superación de la prueba.
@@ -5,8 +6,8 @@
 > Evaluación de RA1, RA4, RA5 y RA6.
  
 ---
-**Nombre:** [Nombre del alumno]
-**RA de los que te examinas:** [RA de los que te examinas. Ojo, no confundas RAs con Unidad]
+**Nombre:** Cristian Carrasco Jimenez
+**RA de los que te examinas:** RA4
 ---
 
 
@@ -49,6 +50,10 @@ Kotlin es un lenguaje de **alto nivel**, normalmente **compilado a bytecode** pa
 
 *Respuesta a la pregunta 8. (mínimo 200 palabras)*
 
+- working(creo que no era asi) area, staying area , stash y habia una mas porque eran 3 importantes.
+- Staying area: Esta area sirve para cuando estas trabajando en un proyecto, en esta una vez terminado puedes hacer commit para como guardaar los cambios que has hecho o este trabajo se puede quedar aqui y puedes ir a revisar otra rama o otra cosa, sin necesidad de tener que guardar los cambios con un commit.
+- Stash: aqui es donde se guarda momentaneamente lo del staying area si te vas de el sin guardar
+- el area final (working area): parte digamos guardada en local para poder subirla ya a github. 
 
 ---
 
@@ -62,34 +67,38 @@ Ejemplo de respuesta:
 *Responde a las siguientes situaciones:*
 
 1. Ver el historial de commits en una sola línea.
-    + comando: 
+    + comando: `git log --oneline` o tambien para verlo mas grafico  `git log --oneline --graph`
    
 2. Deshacer el último commit y deshacer cambios. Eliminar los cambios.
-    + comando:
+    + comando: ``
+    + Usando el git log podemos ver los commit hechos y estos tienen su id, usando este id es el que se usa para poder tirar los commit hacia atras.
 
 3. Crear la rama `featureA` y cambiar a ella.
-    + comando:
+    + comando: `git checkout featureA`
 
 4. Ver el estado del repositorio.
-    + comando:
+    + comando: ``
 
 5. Clonar el repositorio `https://github.com/revilofe/HundirFlota.git`.
-    + comando:
+    + comando: `git clone https://github.com/revilofe/HundirFlota.git`
 
 6. Descargar al repositorio local los cambios del remote `origin` rama `main`.
-    + comando:
+    + comando: `git pull origin main`
 
 7. Subir los cambios del repositorio local al remote `origin` rama `main`.
-    + comando:
+    + comando: `git push origin main`
 
 8. Combinar la rama `featureA` con la rama principal.
-    + comando:
+    + comando: `git merge featureA`
+    + Estando en la rama main y teniendo en cuenta que no haya ningun problema de combinarlas.
 
 9. Aplicar rebase a la rama `featureA` con la rama principal.
-    + comando:
+    + comando: `git rebase main`
+    + Estando en la rama featureA.
 
 10. Continuar el rebase de la rama `featureA` con la rama principal, una vez resueltos los conflictos.
-    + comando: 
+    + comando: `git add . && git commit -m "main traido a featureA" && git checkout main && git merge featureA --continue`
+    + Una vez traido lo del main al featureA lo que hacemos es añadirlo todo, luego hacer un commit, luego volvemos a la rama main y ya podremos hacer el merge porque no habra conflictos, porque se habra podido hacer el merge fast forward.
 
 ---
 
